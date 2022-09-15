@@ -22,6 +22,7 @@ fetch("./texts.json")
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
   const newLetter = e.key;
+  e.preventDefault();
 
   // Handle backspace press
   if (newLetter == "Backspace") {
@@ -101,7 +102,7 @@ const closeModal = () => {
 const start = () => {
   // If already started, do not start again
   if (startTime) return;
-  
+
   let count = 3;
   countdownOverlay.style.display = "flex";
 
